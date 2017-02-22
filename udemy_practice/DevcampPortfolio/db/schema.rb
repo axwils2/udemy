@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20170222215646) do
+=======
+ActiveRecord::Schema.define(version: 20170222213209) do
+>>>>>>> e33b04ee922b3a1c0db75a4cd0bb05ed7ced30f1
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,10 +22,16 @@ ActiveRecord::Schema.define(version: 20170222215646) do
   create_table "blogs", force: :cascade do |t|
     t.string   "title"
     t.text     "body"
+<<<<<<< HEAD
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
     t.string   "slug"
     t.integer  "status",     default: 0
+=======
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "slug"
+>>>>>>> e33b04ee922b3a1c0db75a4cd0bb05ed7ced30f1
     t.index ["slug"], name: "index_blogs_on_slug", unique: true, using: :btree
   end
 
